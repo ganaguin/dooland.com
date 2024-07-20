@@ -124,6 +124,29 @@ body {
   color: #fff;
   background-color: #ffffffa1;
 }
+ .slenglog {
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .selengkapnya {
+      border: 2px solid #14863d;
+      background-color: #FFF;
+      color: #28a745;
+      border-radius: 5px;
+      font-weight: 600;
+      padding: 4px 20px;
+      margin: 20px 0px;
+      text-align: center;
+    }
+
+    .selengkapnya:hover {
+      background-color: #28a745;
+      color: #fff;
+    }
 .session-title {
   padding: 30px;
   margin: 0px;
