@@ -109,26 +109,20 @@ body {
   text-rendering: optimizeLegibility;
   color: #6A6A6A;
   overflow-x: hidden; }
-.slenglog{
-  padding: 20px;
-  width: 100%;
-  display: flex;
+.login{
+  border: 0.1px solid #fff;
+  padding: 4px 20px;
+  font-size: 1.2rem;
+  text-align: center;
   justify-content: center;
-  align-items: center;
-}
-.selengkapnya{
-border: 2px solid #14863d;
-background-color: #FFF;
-color: #28a745;
-border-radius: 5px;
-font-weight: 600;
-padding: 4px 20px;
-margin: 20px 0px;
-text-align: center;
-}
-.selengkapnya:hover{
-  background-color: #28a745;
   color: #fff;
+  font-weight: 600;
+  background-color: #ffffff21;
+  border-radius: 5px;
+}
+.login:hover{
+  color: #fff;
+  background-color: #ffffffa1;
 }
 .session-title {
   padding: 30px;
@@ -420,7 +414,8 @@ header {
     .destinations {
       padding: 30px 10px; } }
   .destinations .dest-row {
-    margin-top: 20px; }
+    margin-top: 20px;
+  }
     .destinations .dest-row .dest-col {
       text-align: center; }
       .destinations .dest-row .dest-col .dest-img {
