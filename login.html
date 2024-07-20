@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login Dooland</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('assets/images/slider/homepage.jpeg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff2c;
+            padding: 30px 20px;
+            border-radius: 10px;
+            border: 0.1rem solid #fff;
+            color: #fff;
+            font-size: 1.5rem;
+            width: 300px;
+            text-align: center;
+            display: inline;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container h2 {
+            margin-bottom: 10px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            background-color: #ffffff2c;
+            border: 0.1rem solid #fff;
+            color: #ffffff;
+            width: 100%;
+            padding: 20px 0px;
+            margin: 20px 0px;
+            border: none;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .login-container input[type="submit"] {
+            background-color: #ffffff2c;
+            border: 0.1rem solid #fff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background: #ffffff9c;
+        }
+        .error-message {
+            color: red;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Dooland</h2>
+        <p>untuk testing gunakan</p>
+        <p>username: tester</p>
+        <p>password: tester</p>
+        <p id="error" class="error-message"></p>
+        <form onsubmit="return validateLogin()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'tester' && password === 'tester') {
+                localStorage.setItem('loggedIn', 'true');
+                window.location.href = 'index.html';
+                return false;
+            } else {
+                document.getElementById('error').textContent = 'Username atau password salah';
+                return false;
+            }
+        }
+        if (localStorage.getItem('loggedIn') === 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
